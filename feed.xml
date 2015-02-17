@@ -1,30 +1,94 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Baltazore&#39;s corner</title>
+    <description>Hello! I am a Ruby developer with interests to new technologies.
+</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 17 Feb 2015 18:05:09 +0700</pubDate>
+    <lastBuildDate>Tue, 17 Feb 2015 18:05:09 +0700</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Installing debugger gem</title>
+        <description>&lt;p&gt;Another post about issues with legacy code. Sometimes I got fails when installing &lt;code&gt;debugger&lt;/code&gt; gem for ruby 1.9.3. If you have similar issue, try this:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;gem update debugger-ruby_core_source&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;And then install &lt;code&gt;debugger&lt;/code&gt; again by:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;gem install debugger -v 1.6.5&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Also please note, that for ruby &lt;code&gt;2.x.x&lt;/code&gt; you need to install&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;gem install byebug&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;That’s all I have. Later.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 17 Feb 2015 02:20:58 +0700</pubDate>
+        <link>/ruby/2015/02/17/installing-debugger-gem.html</link>
+        <guid isPermaLink="true">/ruby/2015/02/17/installing-debugger-gem.html</guid>
+        
+        
+        <category>ruby</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Installing Spring with Rbenv</title>
+        <description>&lt;p&gt;Recently I was restoring my development environment. And I think it’s time to change something. So I moved from &lt;a href=&quot;http://rvm.io&quot;&gt;rvm&lt;/a&gt; to &lt;a href=&quot;http://rbenv.org&quot;&gt;rbenv&lt;/a&gt;, removed all my gemsets, saved about 12Gb of disk space, and let &lt;a href=&quot;http://bundler.io&quot;&gt;Bundler&lt;/a&gt; resolve my gems dependensies.&lt;/p&gt;
+
+&lt;p&gt;But not all was going well. I catched an issue with spring on fresh install ruby 1.9.3. I know that 1.9.3 is out of &lt;a href=&quot;https://www.ruby-lang.org/en/news/2014/01/10/ruby-1-9-3-will-end-on-2015/&quot;&gt;support&lt;/a&gt; but my customer don’t want to upgrade.&lt;/p&gt;
+
+&lt;p&gt;So what I had:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;lib/spring/sid.rb:17:in &lt;span class=&quot;s1&quot;&gt;&amp;#39;fiddle_func&amp;#39;&lt;/span&gt;: uninitialized constant Spring::SID::DL &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;NameError&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;And how to fix this for &lt;a href=&quot;https://github.com/sstephenson/ruby-build&quot;&gt;ruby-build&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;ruby-install -p https://gist.githubusercontent.com/caius/10452604/raw/acd421a8461f4d776a8f752663db19e321f850e0/ext_dl_extconf_rb.patch ruby 1.9.3-p551&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;And for rbenv:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;rbenv install --patch 1.9.3-p551 &amp;lt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;curl -sSL https://gist.githubusercontent.com/caius/10452604/raw/acd421a8461f4d776a8f752663db19e321f850e0/ext_dl_extconf_rb.patch&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Thanks to amazing issue &lt;a href=&quot;https://github.com/rails/spring/issues/274#issuecomment-40185955&quot;&gt;comment&lt;/a&gt;. I just want to share this with you.&lt;/p&gt;
+
+&lt;p&gt;That’s all I have. Later.&lt;/p&gt;
+
+&lt;p&gt;Updated:
+And for now this issue should be &lt;a href=&quot;https://github.com/rails/spring/pull/357&quot;&gt;fixed&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 16 Feb 2015 02:10:28 +0700</pubDate>
+        <link>/ruby/2015/02/16/installing-spring-with-rbenv.html</link>
+        <guid isPermaLink="true">/ruby/2015/02/16/installing-spring-with-rbenv.html</guid>
+        
+        
+        <category>ruby</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;Yeah, this is my first blog post. Actually it was generated by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, that I use here.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now I am going to post here some my previous notes stored in gists, or coderwall, or just notes near my monitor. After that I will continue posting about various stuff.&lt;/p&gt;
+
+&lt;p&gt;That’s all I have. Later.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 10 Feb 2015 22:37:14 +0700</pubDate>
+        <link>/jekyll/2015/02/10/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">/jekyll/2015/02/10/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
   </channel>
 </rss>
