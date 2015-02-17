@@ -6,12 +6,12 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Feb 2015 18:41:13 +0700</pubDate>
-    <lastBuildDate>Tue, 17 Feb 2015 18:41:13 +0700</lastBuildDate>
+    <pubDate>Tue, 17 Feb 2015 18:43:36 +0700</pubDate>
+    <lastBuildDate>Tue, 17 Feb 2015 18:43:36 +0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Install Libv8 and Therubyracer for ree-1.8.7-201202</title>
+        <title>Install libv8 and therubyracer for ree-1.8.7-201202</title>
         <description>&lt;p&gt;Another issue that could take about 20 hours of investigating. It’s really hard to install &lt;code&gt;therubyracer&lt;/code&gt; gem v 0.12.0 on new Mac OS X 10.10. Actually edge of problem in installed libv8 from homebrew.&lt;/p&gt;
 
 &lt;p&gt;Here the steps that save my time and time of my co-worker, after he broke his laptop &lt;img class=&quot;emoji&quot; title=&quot;:bomb:&quot; alt=&quot;:bomb:&quot; src=&quot;https://assets.github.com/images/icons/emoji/unicode/1f4a3.png&quot; height=&quot;20&quot; width=&quot;20&quot; align=&quot;absmiddle&quot; /&gt;&lt;/p&gt;
