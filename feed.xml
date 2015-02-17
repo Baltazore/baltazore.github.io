@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Feb 2015 18:37:00 +0700</pubDate>
-    <lastBuildDate>Tue, 17 Feb 2015 18:37:00 +0700</lastBuildDate>
+    <pubDate>Tue, 17 Feb 2015 18:41:13 +0700</pubDate>
+    <lastBuildDate>Tue, 17 Feb 2015 18:41:13 +0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -105,6 +105,8 @@ And for now this issue should be &lt;a href=&quot;https://github.com/rails/sprin
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now I am going to post here some my previous notes stored in gists, or coderwall, or just notes near my monitor. After that I will continue posting about various stuff.&lt;/p&gt;
+
+&lt;p&gt;Also feel free to contribute when you spot a typo or disagree with me. Thanks for your time. I hope I help you.&lt;/p&gt;
 
 &lt;p&gt;That’s all I have. Later.&lt;/p&gt;
 
