@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Install libv8 and therubyracer for ree-1.8.7-201202</title>
-  <meta name="description" content="Another issue that could take about 20 hours of investigating. It’s really hard to install therubyracer gem v 0.12.0 on new Mac OS X 10.10. Actually edge of ...">
+  <title>Profiling Ruby Code</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/2015/02/17/install-libv8-and-therubyracer-for-ree-1-8-7-201202.html">
+  <link rel="canonical" href="/ruby/2015/02/27/profiling-ruby-code.html">
   <link rel="alternate" type="application/rss+xml" title="Baltazore's corner" href="/feed.xml" />
 </head>
   <link href='/stylesheets/all-47650e22ac304aa20e69a979b21becde.css' media='all' rel='stylesheet' type='text/css'>
@@ -56,29 +56,12 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Install libv8 and therubyracer for ree-1.8.7-201202</h1>
-    <p class="post-meta">Feb 17, 2015</p>
+    <h1 class="post-title">Profiling Ruby Code</h1>
+    <p class="post-meta">Feb 27, 2015</p>
   </header>
 
   <article class="post-content">
-    <p>Another issue that could take about 20 hours of investigating. It’s really hard to install <code>therubyracer</code> gem v 0.12.0 on new Mac OS X 10.10. Actually edge of problem in installed libv8 from homebrew.</p>
-
-<p>Here the steps that save my time and time of my co-worker, after he broke his laptop <img class="emoji" title=":bomb:" alt=":bomb:" src="https://assets.github.com/images/icons/emoji/unicode/1f4a3.png" height="20" width="20" align="absmiddle" /></p>
-
-<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">rbenv <span class="nb">local </span>ree-1.8.7-2012.02
-</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">gem install bundler
-</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">git clone https://github.com/cowboyd/libv8
-</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">cd </span>libv8
-</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">git checkout v3.16.14.3
-</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">echo</span> <span class="s2">&quot;source &#39;https://rubygems.org&#39;\ngem &#39;rubyzip&#39;, &#39;0.9.7&#39; \ngemspec\n&quot;</span> &gt; Gemfile
-</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">gem update --system
-</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line">rake checkout
-</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line">curl https://raw.githubusercontent.com/sikachu/libv8/20093a74bfc77bd5ef772d8173f14e603682c373/patches/clang51/no-unused-variable.patch -o patches/my-patch
-</div></div><div data-line="10" class="code-highlight-row numbered"><div class="code-highlight-line">git add patches/my-patch.patch
-</div></div><div data-line="11" class="code-highlight-row numbered"><div class="code-highlight-line">rake install
-</div></div><div data-line="12" class="code-highlight-row numbered"><div class="code-highlight-line">gem install therubyracer -v <span class="s1">&#39;0.12.0&#39;</span></div></div></pre></div></figure>
-
-<p>That’s all I have. Later.</p>
+    
 
   </article>
 

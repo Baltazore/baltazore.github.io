@@ -59,10 +59,69 @@
   <ul class="post-list">
     
       <li>
+        <span class="post-meta">Feb 27, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/ruby/2015/02/27/profiling-ruby-code.html">Profiling Ruby Code</a>
+        </h2>
+
+        <article class="post-content">
+          
+
+        </article>
+
+      </li>
+    
+      <li>
+        <span class="post-meta">Feb 22, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/ruby/2015/02/22/patching-ruby.html">Patching Ruby</a>
+        </h2>
+
+        <article class="post-content">
+          <p>Sometimes you might need to profile your Rails application or just Ruby script. And sometimes <code>Benchmark</code> module is enough, but sometimes not. So if you need to measure memory consuming for your project it’s could become not so trivial thing.</p>
+
+<p>But thankfully, we have amazing gem called <a href="https://github.com/ruby-prof/ruby-prof">ruby-prof</a>.
+One thing that could make you sad - you need to patch your ruby interpreter to unleash all powers from this gem. And this part I cover in this post.</p>
+
+<p>Before we start I should notice that it’s really simple to do, if you use <a href="http://rvm.io">rvm</a>.
+Just paste this line to terminal window:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">rvm reinstall 2.2.0 --patch railsexpress</div></div></pre></div></figure>
+
+<p>Thats all. It is so simple. It’s Just Works™.</p>
+
+<p>If you, like me, use <a href="http://rbenv.org">rbenv</a>, then things not so simple, but not so hard.</p>
+
+<p>All rvm patches stored in this tiny <a href="https://github.com/skaes/rvm-patchsets/">repo</a>. So we can use them for our needs. Let’s clone repo:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">cd</span> ~
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">mkdir temp <span class="o">&amp;&amp;</span> <span class="nb">cd </span>temp
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">git clone https://github.com/skaes/rvm-patchsets/</div></div></pre></div></figure>
+
+<p>Under hood rbenv use <a href="https://github.com/sstephenson/ruby-build">ruby-build</a> for installing rubies. And we could apply patches when installing new version of ruby. So thats what I’ve done to apply rails-express patches with rbenv:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">cd </span>patches/ruby/2.2.0/railsexpress
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">cat *.patch <span class="p">|</span> rbenv install --patch 2.2.0</div></div></pre></div></figure>
+
+<p>Don’t forget to clean up your home <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle" /></p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">cd</span> ~
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">rm -rf temp</div></div></pre></div></figure>
+
+<p>That’s all I have. Later.</p>
+
+
+        </article>
+
+      </li>
+    
+      <li>
         <span class="post-meta">Feb 17, 2015</span>
 
         <h2>
-          <a class="post-link" href="/2015/02/17/install-libv8-and-therubyracer-for-ree-1-8-7-201202.html">Install libv8 and therubyracer for ree-1.8.7-201202</a>
+          <a class="post-link" href="/ruby/2015/02/17/install-libv8-and-therubyracer-for-ree-1-8-7-201202.html">Install libv8 and therubyracer for ree-1.8.7-201202</a>
         </h2>
 
         <article class="post-content">
