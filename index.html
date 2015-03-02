@@ -14,7 +14,7 @@
   <link rel="canonical" href="/">
   <link rel="alternate" type="application/rss+xml" title="Baltazore's corner" href="/feed.xml" />
 </head>
-  <link href='/stylesheets/all-47650e22ac304aa20e69a979b21becde.css' media='all' rel='stylesheet' type='text/css'>
+  <link href='/stylesheets/all-5b387604eeffe3bc1038d8a335825996.css' media='all' rel='stylesheet' type='text/css'>
 
   <body>
 
@@ -66,7 +66,101 @@
         </h2>
 
         <article class="post-content">
-          
+          <p>This week I was looking for a job and went through several interviews
+And one of interviewers was really kind and fun person</p>
+
+<p>He give me a task to write fibonacci sequence method. Yeah, just simple method.
+I started with recursion version that everyone knows from books about C language.</p>
+
+<p>This is my version:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">def</span> <span class="nf">recursive</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">recursive</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">recursive</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">end</span></div></div></pre></div></figure>
+
+<p>Then he said:</p>
+
+<blockquote>
+  <p>‘All right, another recursive fibonacci. Let’s do some fun things. Create another one, but without recursion.’</p>
+</blockquote>
+
+<p>Thought not for long, I came with this one:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">def</span> <span class="nf">array_version</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">array</span> <span class="o">=</span> <span class="o">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">]</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="n">.n</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="o">]</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="k">end</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">array</span><span class="o">[</span><span class="n">n</span><span class="o">]</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">end</span></div></div></pre></div></figure>
+
+<blockquote>
+  <p>‘Ok. Version with populating array. That’s good one. But try again without Array.’</p>
+</blockquote>
+
+<p>I immediately thought about this <a href="http://urgetopunt.com/ruby/2009/08/13/fibonacci-hash.html">hash version</a>. But really I forgot this one liner.
+So I started to talk about hash version with memoization.</p>
+
+<blockquote>
+  <p>‘Oh no. Let’s combine some algorithms. Do you remember something about swap?’</p>
+</blockquote>
+
+<p>I was shocked. I never thought about this before. And here is my version:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">def</span> <span class="nf">swaps_v</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="n">.n</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="n">b</span> <span class="o">=</span> <span class="n">c</span>
+</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="k">end</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="10" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">c</span>
+</div></div><div data-line="11" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">end</span></div></div></pre></div></figure>
+
+<p>So, skype call was ended. But I didn’t stop here. I think I should benchmark this 3
+versions. But here is one problem. Recursive version goes too deep in Ruby call
+stack when you pass a big numbers ( more than 1_000 ). So I benchmarked only 2 versions.
+Take a look:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">require</span> <span class="s1">&#39;benchmark&#39;</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="nb">require</span> <span class="s1">&#39;benchmark/ips&#39;</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="no">Benchmark</span><span class="o">.</span><span class="n">bmbm</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">x</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s2">&quot;with array&quot;</span><span class="p">)</span>  <span class="p">&#x7b;</span> <span class="n">array_version</span><span class="p">(</span><span class="mi">500_000</span><span class="p">)</span> <span class="p">&#x7d;</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">x</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s2">&quot;with swaps&quot;</span><span class="p">)</span>  <span class="p">&#x7b;</span> <span class="n">swaps_version</span><span class="p">(</span><span class="mi">500_000</span><span class="p">)</span> <span class="p">&#x7d;</span>
+</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">end</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="10" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="no">Benchmark</span><span class="o">.</span><span class="n">ips</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+</div></div><div data-line="11" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">x</span><span class="o">.</span><span class="n">time</span>    <span class="o">=</span> <span class="mi">300</span>
+</div></div><div data-line="12" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">x</span><span class="o">.</span><span class="n">warmup</span>  <span class="o">=</span> <span class="mi">30</span>
+</div></div><div data-line="13" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="14" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">x</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s2">&quot;with array&quot;</span><span class="p">)</span>  <span class="p">&#x7b;</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">array_version</span><span class="p">(</span><span class="mi">500_000</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="p">&#x7d;</span>
+</div></div><div data-line="15" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">x</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s2">&quot;with swaps&quot;</span><span class="p">)</span>  <span class="p">&#x7b;</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">swaps_version</span><span class="p">(</span><span class="mi">500_000</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="p">&#x7d;</span>
+</div></div><div data-line="16" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="17" class="code-highlight-row numbered"><div class="code-highlight-line">  <span class="n">x</span><span class="o">.</span><span class="n">compare!</span>
+</div></div><div data-line="18" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">end</span></div></div></pre></div></figure>
+
+<p>Results:</p>
+
+<figure class="code-highlight-figure"><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">Rehearsal ----------------------------------------------
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">with array   8.950000   4.410000  13.360000 <span class="o">(</span> 55.861728<span class="o">)</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">with swaps   6.640000  20.380000  27.020000 <span class="o">(</span> 86.851786<span class="o">)</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">------------------------------------ total: 40.380000sec
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">                 user     system      total        real
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">with array   8.560000   4.290000  12.850000 <span class="o">(</span> 51.432273<span class="o">)</span>
+</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line">with swaps   4.220000   1.590000   5.810000 <span class="o">(</span>  5.950049<span class="o">)</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line">Calculating -------------------------------------
+</div></div><div data-line="10" class="code-highlight-row numbered"><div class="code-highlight-line">          with array     1.000  i/100ms
+</div></div><div data-line="11" class="code-highlight-row numbered"><div class="code-highlight-line">          with swaps     1.000  i/100ms
+</div></div><div data-line="12" class="code-highlight-row numbered"><div class="code-highlight-line">-------------------------------------------------
+</div></div><div data-line="13" class="code-highlight-row numbered"><div class="code-highlight-line">          with array      0.012  <span class="o">(</span>± 0.0%<span class="o">)</span> i/s -      4.000  in 400.374162s
+</div></div><div data-line="14" class="code-highlight-row numbered"><div class="code-highlight-line">          with swaps      0.151  <span class="o">(</span>± 0.0%<span class="o">)</span> i/s -     46.000
+</div></div><div data-line="15" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="16" class="code-highlight-row numbered"><div class="code-highlight-line">Comparison:
+</div></div><div data-line="17" class="code-highlight-row numbered"><div class="code-highlight-line">          with swaps:        0.2 i/s
+</div></div><div data-line="18" class="code-highlight-row numbered"><div class="code-highlight-line">          with array:        0.0 i/s - 12.44x slower</div></div></pre></div></figure>
+
+<p>What am I trying to say here? Of course, it will be better to use memoization if you need call fibonacci sequence many times with different arguments. But if you need 1 time per day fibonacci number, maybe you should think about implementing tricky algorithm.</p>
+
+<p>That’s all I have. Later.</p>
+
 
         </article>
 
