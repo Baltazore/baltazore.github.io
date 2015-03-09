@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Hello! I am a Ruby developer with interests to new technologies.
-">
+  <title>Concurency programming wiht Ruby</title>
+  <meta name="description" content="Список литературы для ознакомления с concurrent programming и реализацией этих принципов и подходов на ruby. Огромное спасибо @brainopia за составление.">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/about/">
+  <link rel="canonical" href="/ruby/2015/02/20/concurency-programming-with-ruby.html">
   <link rel="alternate" type="application/rss+xml" title="Baltazore's corner" href="/feed.xml" />
 </head>
   <link href='/stylesheets/all-5b387604eeffe3bc1038d8a335825996.css' media='all' rel='stylesheet' type='text/css'>
@@ -57,24 +56,62 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">Concurency programming wiht Ruby</h1>
+    <p class="post-meta">Feb 20, 2015</p>
   </header>
 
   <article class="post-content">
-    <h2 id="hello-my-name-is-kirill-i-live-in-minsk-and-i-love-writing-code">Hello! My name is Kirill. I live in Minsk, and I love writing code.</h2>
+    <p>Список литературы для ознакомления с concurrent programming и реализацией этих принципов и подходов на ruby. Огромное спасибо <a href="https://github.com/brainopia" class="user-mention">@brainopia</a> за составление.</p>
 
-<p>I’ve been programming in some form since I was 16 years old. At the university(BSUIR) I gained a strong foundation in computer science theory in addition to experience in actual software development through several internships, side projects, and a couple of entrepreneurial endeavors.</p>
+<h1 id="introducing">Introducing</h1>
 
-<p>For the about two years since graduating, I’ve been in the mobile advertising services industry. At GPN I worked on client side JavaScript application for native sdks (written with AngularJS and CoffeeScript) and on server side (Ruby on Rails) dealing with reporting stuff and complex mobile advertising system. Also I was involved in maintaining and improving API (tiny Sinatra app with Grape endpoint).</p>
+<p>Начать стоит отсюда. Не пугайтесь то, что это книга по незнакомой OS, эти термины практически везде одинаковые и здесь они изложены в понятной для начинающих форме.</p>
 
-<p>On the side, I am developing a project, that, I hope, will grow in SaaS to help me and other developers in daily workflow with GitHub. It’s not open-sourced yet, but will be after release.</p>
+<p>http://www.qnx.com/developers/docs/6.4.1/neutrino/getting_started/s1_procs.html</p>
 
-<p>I am looking for the next place I can make a significant contribution. While I write mostly Ruby and JavaScript at work currently, I’ve spent various stretches in the past working in C/C#, Python, and Elixir/Erlang. My favorite thing to do in my spare time is learn. Thus, I am a quick learner and I’m able to rapidly get up to speed in a new environment. I have a special place in my heart for networking and the Web, and would love to work on problems at a large scale. I’m a down-to-earth dude who is passionate about technology, loves a good technical conversation, and I’m anxious to work with other like me.</p>
+<p>Прочесть нужно треть главы до подраздела “Starting a process”, если С не пугает, читайте полностью. После прочтения вы будете понимать, что такое process, thread, mutex, priorites, semaphores, scheduler, contex-switch, kernel states.</p>
 
-<p>Here I save my thoughts about tech and live.</p>
+<h2 id="ruby">Ruby</h2>
 
-<p>If you interested to hire me, ckeck my <a href="https://www.linkedin.com/pub/kirill-shaplyko/61/473/9a1/en">LinkedIn</a> profile or my <a href="https://github.com/Baltazore/resume/blob/master/resume.pdf?raw=true">resume</a>.</p>
+<p>Обзор апи для threads в руби:<br />
+http://www.tutorialspoint.com/ruby/ruby_multithreading.htm</p>
 
+<p>Чтобы понять, что такое green threads и gil в руби:<br />
+http://www.leonardoborges.com/writings/2008/10/28/understanding-ruby-threads/</p>
+
+<p>Продолжение про gil:<br />
+http://ablogaboutcode.com/2012/02/06/the-ruby-global-interpreter-lock/</p>
+
+<p>Теперь у нас есть базовый словарь терминов, чтобы понять разницу в реализации различных руби:<br />
+https://blog.engineyard.com/2011/ruby-concurrency-and-you</p>
+
+<p>Теперь добавим в микс fibers и cpu/io-bound:<br />
+http://blog.engineyard.com/2010/concurrency-real-and-imagined-in-mri-threads</p>
+
+<p>Теперь чуть подробнее про fibers:<br />
+http://paulbarry.com/articles/2010/04/01/fibers-in-ruby-1-9</p>
+
+<p>Пример использования fibers:<br />
+http://pragdave.blogs.pragprog.com/pragdave/2007/12/pipelines-using.html</p>
+
+<p>Пример реализации fibers через threads:<br />
+https://gist.github.com/tmm1/4631</p>
+
+<p>Event loop:<br />
+https://blog.engineyard.com/2011/what-are-events-why-might-you-care-and-how-can-eventmachine-help <br />
+https://practicingruby.com/articles/shared/ehiyknnsskrr</p>
+
+<p>Fibers для скрытия event loop колбеков:<br />
+http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/ <br />
+http://blog.paracode.com/2012/09/07/pragmatic-concurrency-with-ruby/</p>
+
+<p>Про синхронизацию:<br />
+http://www.confreaks.com/videos/702-rubyconf2011-scaling-ruby-with-actors-or-how-i-learned-to-stop-worrying-and-love-threads <br />
+http://confreaks.com/videos/1261-rockymtnruby2012-let-s-talk-concurrency</p>
+
+<p>Про Сelluloid и Sidekiq:<br />
+http://www.confreaks.com/videos/1302-rubyconf2012-the-celluloid-ecosystem <br />
+http://www.confreaks.com/videos/1290-rubyconf2012-asynchronous-processing-for-fun-and-profit</p>
 
   </article>
 
