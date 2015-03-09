@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Mar 2015 17:47:47 +0700</pubDate>
-    <lastBuildDate>Mon, 09 Mar 2015 17:47:47 +0700</lastBuildDate>
+    <pubDate>Mon, 09 Mar 2015 19:15:54 +0700</pubDate>
+    <lastBuildDate>Mon, 09 Mar 2015 19:15:54 +0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -163,57 +163,86 @@ Just paste this line to terminal window:&lt;/p&gt;
     
       <item>
         <title>Concurency programming wiht Ruby</title>
-        <description>&lt;p&gt;Список литературы для ознакомления с concurrent programming и реализацией этих принципов и подходов на ruby. Огромное спасибо &lt;a href=&quot;https://github.com/brainopia&quot; class=&quot;user-mention&quot;&gt;@brainopia&lt;/a&gt; за составление.&lt;/p&gt;
+        <description>&lt;p&gt;References to become familiar with concurrent programming and implementation of these principles and approaches to Ruby.&lt;/p&gt;
 
 &lt;h1 id=&quot;introducing&quot;&gt;Introducing&lt;/h1&gt;
 
-&lt;p&gt;Начать стоит отсюда. Не пугайтесь то, что это книга по незнакомой OS, эти термины практически везде одинаковые и здесь они изложены в понятной для начинающих форме.&lt;/p&gt;
+&lt;p&gt;You should start here. Do not be put off by the fact that it is a book by an unknown OS, these terms are practically the same everywhere, and here they are presented in an understandable form for beginners.&lt;/p&gt;
 
-&lt;p&gt;http://www.qnx.com/developers/docs/6.4.1/neutrino/getting_started/s1_procs.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.qnx.com/developers/docs/6.4.1/neutrino/getting_started/s1_procs.html&quot;&gt;Processes and Threads&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Прочесть нужно треть главы до подраздела “Starting a process”, если С не пугает, читайте полностью. После прочтения вы будете понимать, что такое process, thread, mutex, priorites, semaphores, scheduler, contex-switch, kernel states.&lt;/p&gt;
+&lt;p&gt;Need to read the third part of a chapter to the subsection “Starting a process”, if C is not afraid, read completely. After reading you will understand that this process, thread, mutex, priorites, semaphores, scheduler, contex-switch, kernel states.&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby&quot;&gt;Ruby&lt;/h2&gt;
 
-&lt;p&gt;Обзор апи для threads в руби:&lt;br /&gt;
-http://www.tutorialspoint.com/ruby/ruby_multithreading.htm&lt;/p&gt;
+&lt;p&gt;API reference for Threads in Ruby:&lt;/p&gt;
 
-&lt;p&gt;Чтобы понять, что такое green threads и gil в руби:&lt;br /&gt;
-http://www.leonardoborges.com/writings/2008/10/28/understanding-ruby-threads/&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.tutorialspoint.com/ruby/ruby_multithreading.htm&quot;&gt;Ruby MultiThreading&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Продолжение про gil:&lt;br /&gt;
-http://ablogaboutcode.com/2012/02/06/the-ruby-global-interpreter-lock/&lt;/p&gt;
+&lt;p&gt;About Green Threads and GIL in Ruby:&lt;/p&gt;
 
-&lt;p&gt;Теперь у нас есть базовый словарь терминов, чтобы понять разницу в реализации различных руби:&lt;br /&gt;
-https://blog.engineyard.com/2011/ruby-concurrency-and-you&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.leonardoborges.com/writings/2008/10/28/understanding-ruby-threads/&quot;&gt;Understanding Ruby Threads&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ablogaboutcode.com/2012/02/06/the-ruby-global-interpreter-lock/&quot;&gt;The Ruby Global Interpreter Lock&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Теперь добавим в микс fibers и cpu/io-bound:&lt;br /&gt;
-http://blog.engineyard.com/2010/concurrency-real-and-imagined-in-mri-threads&lt;/p&gt;
+&lt;p&gt;We now have a basic glossary of terms to understand the difference in the various of Ruby implementations:&lt;/p&gt;
 
-&lt;p&gt;Теперь чуть подробнее про fibers:&lt;br /&gt;
-http://paulbarry.com/articles/2010/04/01/fibers-in-ruby-1-9&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.engineyard.com/2011/ruby-concurrency-and-you&quot;&gt;Ruby Concurrence and You&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Пример использования fibers:&lt;br /&gt;
-http://pragdave.blogs.pragprog.com/pragdave/2007/12/pipelines-using.html&lt;/p&gt;
+&lt;p&gt;Read about fibers and cpu/io-bound:&lt;/p&gt;
 
-&lt;p&gt;Пример реализации fibers через threads:&lt;br /&gt;
-https://gist.github.com/tmm1/4631&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.engineyard.com/2010/concurrency-real-and-imagined-in-mri-threads&quot;&gt;Concurrency Real and Imagined in MRI Threads&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://paulbarry.com/articles/2010/04/01/fibers-in-ruby-1-9&quot;&gt;Fibers in Ruby 1.9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Event loop:&lt;br /&gt;
-https://blog.engineyard.com/2011/what-are-events-why-might-you-care-and-how-can-eventmachine-help &lt;br /&gt;
-https://practicingruby.com/articles/shared/ehiyknnsskrr&lt;/p&gt;
+&lt;p&gt;Example of usage fibers:&lt;/p&gt;
 
-&lt;p&gt;Fibers для скрытия event loop колбеков:&lt;br /&gt;
-http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/ &lt;br /&gt;
-http://blog.paracode.com/2012/09/07/pragmatic-concurrency-with-ruby/&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pragdave.me/blog/2007/12/30/pipelines-using-fibers-in-ruby-19/&quot;&gt;Pipelines Using Fibers in Ruby 1.9&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/tmm1/4631&quot;&gt;Poor Man’s Fiber (API compatible Thread based Fiber implementation for Ruby 1.8)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Про синхронизацию:&lt;br /&gt;
-http://www.confreaks.com/videos/702-rubyconf2011-scaling-ruby-with-actors-or-how-i-learned-to-stop-worrying-and-love-threads &lt;br /&gt;
-http://confreaks.com/videos/1261-rockymtnruby2012-let-s-talk-concurrency&lt;/p&gt;
+&lt;p&gt;Event loop:&lt;/p&gt;
 
-&lt;p&gt;Про Сelluloid и Sidekiq:&lt;br /&gt;
-http://www.confreaks.com/videos/1302-rubyconf2012-the-celluloid-ecosystem &lt;br /&gt;
-http://www.confreaks.com/videos/1290-rubyconf2012-asynchronous-processing-for-fun-and-profit&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.engineyard.com/2011/what-are-events-why-might-you-care-and-how-can-eventmachine-help&quot;&gt;What Are Events, Why Might You Care, and How Can EventMachine Help?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://practicingruby.com/articles/shared/ehiyknnsskrr&quot;&gt;Event loops demystified&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fibers to hide Event Loop callbacks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers&quot;&gt;Untangling Evented Code with Ruby Fibers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.paracode.com/2012/09/07/pragmatic-concurrency-with-ruby/&quot;&gt;Pragmatic Concurrency With Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;About synchronization:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.confreaks.com/videos/702-rubyconf2011-scaling-ruby-with-actors-or-how-i-learned-to-stop-worrying-and-love-threads&quot;&gt;Scaling Ruby with actors, or how I learned to stop worrying and love Threads&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://confreaks.com/videos/1261-rockymtnruby2012-let-s-talk-concurrency&quot;&gt;Let’s talk about concurrency&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;About Сelluloid and Sidekiq:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.confreaks.com/videos/1302-rubyconf2012-the-celluloid-ecosystem&quot;&gt;The Celluloid Ecosystem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.confreaks.com/videos/1290-rubyconf2012-asynchronous-processing-for-fun-and-profit&quot;&gt;Asynchronous Processing for Fun and Profit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And last, but not least repo:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ruby-concurrency/concurrent-ruby&quot;&gt;Concurrent Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s all I have. Later.&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 Feb 2015 13:47:42 +0700</pubDate>
         <link>/ruby/2015/02/20/concurency-programming-with-ruby.html</link>

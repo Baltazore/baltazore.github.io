@@ -219,57 +219,86 @@ Just paste this line to terminal window:</p>
         </h2>
 
         <article class="post-content">
-          <p>Список литературы для ознакомления с concurrent programming и реализацией этих принципов и подходов на ruby. Огромное спасибо <a href="https://github.com/brainopia" class="user-mention">@brainopia</a> за составление.</p>
+          <p>References to become familiar with concurrent programming and implementation of these principles and approaches to Ruby.</p>
 
 <h1 id="introducing">Introducing</h1>
 
-<p>Начать стоит отсюда. Не пугайтесь то, что это книга по незнакомой OS, эти термины практически везде одинаковые и здесь они изложены в понятной для начинающих форме.</p>
+<p>You should start here. Do not be put off by the fact that it is a book by an unknown OS, these terms are practically the same everywhere, and here they are presented in an understandable form for beginners.</p>
 
-<p>http://www.qnx.com/developers/docs/6.4.1/neutrino/getting_started/s1_procs.html</p>
+<p><a href="http://www.qnx.com/developers/docs/6.4.1/neutrino/getting_started/s1_procs.html">Processes and Threads</a></p>
 
-<p>Прочесть нужно треть главы до подраздела “Starting a process”, если С не пугает, читайте полностью. После прочтения вы будете понимать, что такое process, thread, mutex, priorites, semaphores, scheduler, contex-switch, kernel states.</p>
+<p>Need to read the third part of a chapter to the subsection “Starting a process”, if C is not afraid, read completely. After reading you will understand that this process, thread, mutex, priorites, semaphores, scheduler, contex-switch, kernel states.</p>
 
 <h2 id="ruby">Ruby</h2>
 
-<p>Обзор апи для threads в руби:<br />
-http://www.tutorialspoint.com/ruby/ruby_multithreading.htm</p>
+<p>API reference for Threads in Ruby:</p>
 
-<p>Чтобы понять, что такое green threads и gil в руби:<br />
-http://www.leonardoborges.com/writings/2008/10/28/understanding-ruby-threads/</p>
+<ul>
+  <li><a href="http://www.tutorialspoint.com/ruby/ruby_multithreading.htm">Ruby MultiThreading</a></li>
+</ul>
 
-<p>Продолжение про gil:<br />
-http://ablogaboutcode.com/2012/02/06/the-ruby-global-interpreter-lock/</p>
+<p>About Green Threads and GIL in Ruby:</p>
 
-<p>Теперь у нас есть базовый словарь терминов, чтобы понять разницу в реализации различных руби:<br />
-https://blog.engineyard.com/2011/ruby-concurrency-and-you</p>
+<ul>
+  <li><a href="http://www.leonardoborges.com/writings/2008/10/28/understanding-ruby-threads/">Understanding Ruby Threads</a></li>
+  <li><a href="http://ablogaboutcode.com/2012/02/06/the-ruby-global-interpreter-lock/">The Ruby Global Interpreter Lock</a></li>
+</ul>
 
-<p>Теперь добавим в микс fibers и cpu/io-bound:<br />
-http://blog.engineyard.com/2010/concurrency-real-and-imagined-in-mri-threads</p>
+<p>We now have a basic glossary of terms to understand the difference in the various of Ruby implementations:</p>
 
-<p>Теперь чуть подробнее про fibers:<br />
-http://paulbarry.com/articles/2010/04/01/fibers-in-ruby-1-9</p>
+<ul>
+  <li><a href="https://blog.engineyard.com/2011/ruby-concurrency-and-you">Ruby Concurrence and You</a></li>
+</ul>
 
-<p>Пример использования fibers:<br />
-http://pragdave.blogs.pragprog.com/pragdave/2007/12/pipelines-using.html</p>
+<p>Read about fibers and cpu/io-bound:</p>
 
-<p>Пример реализации fibers через threads:<br />
-https://gist.github.com/tmm1/4631</p>
+<ul>
+  <li><a href="http://blog.engineyard.com/2010/concurrency-real-and-imagined-in-mri-threads">Concurrency Real and Imagined in MRI Threads</a></li>
+  <li><a href="http://paulbarry.com/articles/2010/04/01/fibers-in-ruby-1-9">Fibers in Ruby 1.9</a></li>
+</ul>
 
-<p>Event loop:<br />
-https://blog.engineyard.com/2011/what-are-events-why-might-you-care-and-how-can-eventmachine-help <br />
-https://practicingruby.com/articles/shared/ehiyknnsskrr</p>
+<p>Example of usage fibers:</p>
 
-<p>Fibers для скрытия event loop колбеков:<br />
-http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/ <br />
-http://blog.paracode.com/2012/09/07/pragmatic-concurrency-with-ruby/</p>
+<ul>
+  <li><a href="http://pragdave.me/blog/2007/12/30/pipelines-using-fibers-in-ruby-19/">Pipelines Using Fibers in Ruby 1.9</a></li>
+  <li><a href="https://gist.github.com/tmm1/4631">Poor Man’s Fiber (API compatible Thread based Fiber implementation for Ruby 1.8)</a></li>
+</ul>
 
-<p>Про синхронизацию:<br />
-http://www.confreaks.com/videos/702-rubyconf2011-scaling-ruby-with-actors-or-how-i-learned-to-stop-worrying-and-love-threads <br />
-http://confreaks.com/videos/1261-rockymtnruby2012-let-s-talk-concurrency</p>
+<p>Event loop:</p>
 
-<p>Про Сelluloid и Sidekiq:<br />
-http://www.confreaks.com/videos/1302-rubyconf2012-the-celluloid-ecosystem <br />
-http://www.confreaks.com/videos/1290-rubyconf2012-asynchronous-processing-for-fun-and-profit</p>
+<ul>
+  <li><a href="https://blog.engineyard.com/2011/what-are-events-why-might-you-care-and-how-can-eventmachine-help">What Are Events, Why Might You Care, and How Can EventMachine Help?</a></li>
+  <li><a href="https://practicingruby.com/articles/shared/ehiyknnsskrr">Event loops demystified</a></li>
+</ul>
+
+<p>Fibers to hide Event Loop callbacks:</p>
+
+<ul>
+  <li><a href="http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers">Untangling Evented Code with Ruby Fibers</a></li>
+  <li><a href="http://blog.paracode.com/2012/09/07/pragmatic-concurrency-with-ruby/">Pragmatic Concurrency With Ruby</a></li>
+</ul>
+
+<p>About synchronization:</p>
+
+<ul>
+  <li><a href="http://www.confreaks.com/videos/702-rubyconf2011-scaling-ruby-with-actors-or-how-i-learned-to-stop-worrying-and-love-threads">Scaling Ruby with actors, or how I learned to stop worrying and love Threads</a></li>
+  <li><a href="http://confreaks.com/videos/1261-rockymtnruby2012-let-s-talk-concurrency">Let’s talk about concurrency</a></li>
+</ul>
+
+<p>About Сelluloid and Sidekiq:</p>
+
+<ul>
+  <li><a href="http://www.confreaks.com/videos/1302-rubyconf2012-the-celluloid-ecosystem">The Celluloid Ecosystem</a></li>
+  <li><a href="http://www.confreaks.com/videos/1290-rubyconf2012-asynchronous-processing-for-fun-and-profit">Asynchronous Processing for Fun and Profit</a></li>
+</ul>
+
+<p>And last, but not least repo:</p>
+
+<ul>
+  <li><a href="https://github.com/ruby-concurrency/concurrent-ruby">Concurrent Ruby</a></li>
+</ul>
+
+<p>That’s all I have. Later.</p>
 
         </article>
 
