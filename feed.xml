@@ -4,10 +4,10 @@
     <title>Baltazore&#39;s corner</title>
     <description>Hello! I am a Ruby developer with interests to new technologies.
 </description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Mar 2015 11:06:46 +0700</pubDate>
-    <lastBuildDate>Mon, 16 Mar 2015 11:06:46 +0700</lastBuildDate>
+    <link>http://baltazore.github.io//</link>
+    <atom:link href="http://baltazore.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 16 Mar 2015 11:31:38 +0700</pubDate>
+    <lastBuildDate>Mon, 16 Mar 2015 11:31:38 +0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -109,8 +109,8 @@ Take a look:&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 27 Feb 2015 16:57:05 +0700</pubDate>
-        <link>/ruby/2015/02/27/profiling-ruby-code.html</link>
-        <guid isPermaLink="true">/ruby/2015/02/27/profiling-ruby-code.html</guid>
+        <link>http://baltazore.github.io//ruby/2015/02/27/profiling-ruby-code.html</link>
+        <guid isPermaLink="true">http://baltazore.github.io//ruby/2015/02/27/profiling-ruby-code.html</guid>
         
         
         <category>ruby</category>
@@ -153,8 +153,8 @@ Just paste this line to terminal window:&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 22 Feb 2015 14:21:16 +0700</pubDate>
-        <link>/ruby/2015/02/22/patching-ruby.html</link>
-        <guid isPermaLink="true">/ruby/2015/02/22/patching-ruby.html</guid>
+        <link>http://baltazore.github.io//ruby/2015/02/22/patching-ruby.html</link>
+        <guid isPermaLink="true">http://baltazore.github.io//ruby/2015/02/22/patching-ruby.html</guid>
         
         
         <category>ruby</category>
@@ -245,8 +245,8 @@ Just paste this line to terminal window:&lt;/p&gt;
 &lt;p&gt;That’s all I have. Later.&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 Feb 2015 13:47:42 +0700</pubDate>
-        <link>/ruby/2015/02/20/concurency-programming-with-ruby.html</link>
-        <guid isPermaLink="true">/ruby/2015/02/20/concurency-programming-with-ruby.html</guid>
+        <link>http://baltazore.github.io//ruby/2015/02/20/concurency-programming-with-ruby.html</link>
+        <guid isPermaLink="true">http://baltazore.github.io//ruby/2015/02/20/concurency-programming-with-ruby.html</guid>
         
         
         <category>ruby</category>
@@ -275,8 +275,8 @@ Just paste this line to terminal window:&lt;/p&gt;
 &lt;p&gt;That’s all I have. Later.&lt;/p&gt;
 </description>
         <pubDate>Tue, 17 Feb 2015 18:27:12 +0700</pubDate>
-        <link>/ruby/2015/02/17/install-libv8-and-therubyracer-for-ree-1-8-7-201202.html</link>
-        <guid isPermaLink="true">/ruby/2015/02/17/install-libv8-and-therubyracer-for-ree-1-8-7-201202.html</guid>
+        <link>http://baltazore.github.io//ruby/2015/02/17/install-libv8-and-therubyracer-for-ree-1-8-7-201202.html</link>
+        <guid isPermaLink="true">http://baltazore.github.io//ruby/2015/02/17/install-libv8-and-therubyracer-for-ree-1-8-7-201202.html</guid>
         
         
         <category>ruby</category>
@@ -300,8 +300,8 @@ Just paste this line to terminal window:&lt;/p&gt;
 &lt;p&gt;That’s all I have. Later.&lt;/p&gt;
 </description>
         <pubDate>Tue, 17 Feb 2015 02:20:58 +0700</pubDate>
-        <link>/ruby/2015/02/17/installing-debugger-gem.html</link>
-        <guid isPermaLink="true">/ruby/2015/02/17/installing-debugger-gem.html</guid>
+        <link>http://baltazore.github.io//ruby/2015/02/17/installing-debugger-gem.html</link>
+        <guid isPermaLink="true">http://baltazore.github.io//ruby/2015/02/17/installing-debugger-gem.html</guid>
         
         
         <category>ruby</category>
@@ -335,8 +335,8 @@ And for now this issue should be &lt;a href=&quot;https://github.com/rails/sprin
 
 </description>
         <pubDate>Mon, 16 Feb 2015 02:10:28 +0700</pubDate>
-        <link>/ruby/2015/02/16/installing-spring-with-rbenv.html</link>
-        <guid isPermaLink="true">/ruby/2015/02/16/installing-spring-with-rbenv.html</guid>
+        <link>http://baltazore.github.io//ruby/2015/02/16/installing-spring-with-rbenv.html</link>
+        <guid isPermaLink="true">http://baltazore.github.io//ruby/2015/02/16/installing-spring-with-rbenv.html</guid>
         
         
         <category>ruby</category>
@@ -357,8 +357,8 @@ And for now this issue should be &lt;a href=&quot;https://github.com/rails/sprin
 
 </description>
         <pubDate>Tue, 10 Feb 2015 22:37:14 +0700</pubDate>
-        <link>/jekyll/2015/02/10/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">/jekyll/2015/02/10/welcome-to-jekyll.html</guid>
+        <link>http://baltazore.github.io//jekyll/2015/02/10/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://baltazore.github.io//jekyll/2015/02/10/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
