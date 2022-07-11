@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const color = isDarkMode ? 0x1e20 : 0x8888
 
     if (isDarkMode) {
-      console.log('dark mode')
       document.documentElement.classList.add('dark')
-      console.log(document.documentElement)
     } else {
       document.documentElement.classList.remove('dark')
     }
