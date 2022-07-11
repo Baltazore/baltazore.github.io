@@ -1,7 +1,6 @@
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 
-// @ts-ignore
 import WAVES from 'vanta/dist/vanta.waves.min'
 
 document.addEventListener('DOMContentLoaded', () => {
